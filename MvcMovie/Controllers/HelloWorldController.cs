@@ -10,9 +10,9 @@ namespace MvcMovie.Controllers
     {
         //
         // GET: HelloWorld
-        public string Index()
+        public ActionResult Index()
         {
-            return "this is my <b> default </b> action...";
+            return View();
         }
 
         //
@@ -22,5 +22,10 @@ namespace MvcMovie.Controllers
         {
             return HttpUtility.HtmlEncode("Hello " + name + ", ID: " + ID);
         }
+
+        
+
+        
+    
     }
 }
