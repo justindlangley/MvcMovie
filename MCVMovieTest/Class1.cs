@@ -15,8 +15,9 @@ namespace MCVMovieTest
 
         public void SomeTest()
         {
-            var controller = new HomeController();
-            var someView = controller.About();
+
+            var controller = new HelloWorldController();
+            var someView = controller.Welcome("", 1);
             Assert.NotNull(someView);
             
             var theView = (ViewResult)someView;
