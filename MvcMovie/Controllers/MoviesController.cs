@@ -15,9 +15,18 @@ namespace MvcMovie.Controllers
         private MovieDBContext db = new MovieDBContext();
 
         // GET: Movies
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.Movies.ToList());
+            //Update index to relfect database
+            var movies = from m in db.Movies
+                         select m;
+            //define search String
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.Title.Contains(searchString));
+            }
+            //return variable movies 
+            return View(movies);
         }
 
         // GET: Movies/Details/5
@@ -114,6 +123,8 @@ namespace MvcMovie.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+      
 
         protected override void Dispose(bool disposing)
         {
