@@ -14,10 +14,12 @@ namespace MvcMovie.Models
         
 
         //added attributes to release date.  Defined how the dtae is formatted, specifically
-        //Year first, then Month and day
+        //Year first, then Month and dayty
+        //The display command also forces "release Date" to be displayed with the space
+        //as opposed to "ReleaseDate
         [Display(Name = "Release Date")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0: yyyy-MM-dd }"), ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0: yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime ReleaseDate { get; set; }
         public string Genre { get; set; }
         public decimal Price { get; set; }
