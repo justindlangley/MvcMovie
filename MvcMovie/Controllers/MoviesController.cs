@@ -35,6 +35,13 @@ namespace MvcMovie.Controllers
             {
                 movies = movies.Where(s => s.Title.Contains(searchString));
             }
+            //added genre if clause
+            if (!String.IsNullOrEmpty(movieGenre))
+            {
+                movies = movies.Where(x => x.Genre == movieGenre);
+
+            }
+
             //return variable movies 
             return View(movies);
         }
