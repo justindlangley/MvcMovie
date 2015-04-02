@@ -15,6 +15,7 @@ namespace MvcMovie.Migrations
 
         protected override void Seed(MvcMovie.Models.MovieDBContext context)
         {
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
@@ -27,6 +28,15 @@ namespace MvcMovie.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            context.Movies.AddOrUpdate( i = i.Title,
+                new Movie 
+                {
+                   Title = 
+                   ReleaseDate = 
+                   Genre = 
+                   Price =
+
+                })
         }
     }
 }
