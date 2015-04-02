@@ -170,6 +170,10 @@
     <Compile Include="Migrations\201503311829032_InitialCreate.Designer.cs">
       <DependentUpon>201503311829032_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504021437221_Initial.cs" />
+    <Compile Include="Migrations\201504021437221_Initial.Designer.cs">
+      <DependentUpon>201504021437221_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplyFormatInEditMode.cs" />
@@ -250,6 +254,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503311829032_InitialCreate.resx">
       <DependentUpon>201503311829032_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504021437221_Initial.resx">
+      <DependentUpon>201504021437221_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
