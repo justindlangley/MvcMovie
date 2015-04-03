@@ -50,7 +50,7 @@ namespace MvcMovie.Migrations
                 },
                 new Movie
                 {
-                    Title = "Ghostbusters",
+                    Title = "Ghostbusters 2",
                     ReleaseDate = DateTime.Parse("1986-2-23"),
                     Genre = "Comedy",
                     Price = 9.99M,
